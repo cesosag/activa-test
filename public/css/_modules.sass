@@ -6,10 +6,15 @@
 #sec-nav
 	display: none
 
+@media screen and (max-width: ($tablet - $pxem))
+	#main-nav
+		.btn-cart
+			font-size: 1.5em
+
 @media screen and (min-width: $tablet)
 	.hamburguer
 		display: none
-		
+
 	#main-nav
 		#main-menu,
 		#sec-menu
