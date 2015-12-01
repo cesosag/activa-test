@@ -1,0 +1,14 @@
+{
+  "name": "activa-test",
+  "version": "0.0.1",
+  "description": "Test for Activa",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "cesosag",
+  "license": "ISC",
+  "dependencies": {
+    "harp": "^0.20.1"
+  }
+}
