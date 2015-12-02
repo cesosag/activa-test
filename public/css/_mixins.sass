@@ -1,6 +1,22 @@
 @function add-alpha($color, $alpha)
 	@return rgba(red($color), green($color), blue($color), $alpha)
 
+=nice-shadow($color)
+	border-bottom: 2px solid white
+	border-top: 2px solid add-alpha($color, 0.2)
+	position: relative
+
+	&::after
+		border-radius: 50%
+		bottom: -3px
+		box-shadow: 0 1px 5px $color
+		content: ''
+		height: 20%
+		left: 10px
+		position: absolute
+		right: 10px
+		z-index: -1
+
 =triangled-edge($color, $direction, $position, $size)
 	&
 		@if $direction == right

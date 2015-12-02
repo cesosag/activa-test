@@ -35,6 +35,43 @@
 	a
 		text-decoration: underline
 
+.featured
+	padding: 3em 1em
+
+.featured-category
+	margin-top: 2em
+
+	.featured-category-desc > a
+		float: right
+
+	.featured-category-header
+		align-items: center
+		display: flex
+		justify-content: space-around
+
+	.featured-category-img
+		box-shadow: 0 0 2px $d_gray
+		flex-basis: 25%
+
+		img
+			padding: 1em
+
+		& + div
+			flex-basis: 70%
+
+	.featured-category-product
+		display: none
+
+	.featured-category-text
+		font-size: 1.2em
+		padding: 0 1em
+		text-align: center
+
+	.featured-category-title
+		font-size: 2em
+		font-weight: normal
+		margin: 0
+
 .footer-menu
 	li
 		display: none
@@ -264,6 +301,67 @@
 					color: white
 					text-shadow: 1px 1px 1px black
 					width: auto
+
+	.featured-category
+		+nice-shadow($d_gray)
+		align-items: center
+		background-color: $l_gray
+		display: flex
+		padding: 1em
+		justify-content: space-around
+
+		.featured-category-desc
+			flex-basis: 25%
+
+			& > a
+				float: none
+
+		.featured-category-header
+			display: block
+
+		.featured-category-img,
+		.featured-category-subtitle
+			display: none
+
+		.featured-category-product
+			display: block
+			flex-basis: 22%
+
+		.featured-category-product-img
+			box-shadow: 0 0 2px $d_gray
+			position: relative
+
+			img
+				padding: 1em
+
+			&:hover::after
+				left: 0
+
+			&::after
+				background-color: add-alpha($orange, 0.7)
+				bottom: 0
+				color: white
+				content: $icon-cart
+				font-family: icons
+				left: 100%
+				padding: calc(50% - 0.5em)
+				pointer-events: none
+				position: absolute
+				right: 0
+				top: 0
+				transition: all 0.3s
+
+		.featured-category-product-name
+			font-size: 0.8em
+			margin-top: 0.5em
+			text-align: center
+
+		.featured-category-text
+			padding: 0
+			text-align: left
+
+		.featured-category-title
+			font-size: 1.5em
 
 	.footer-menu
 		margin: 1em 0 0 0
