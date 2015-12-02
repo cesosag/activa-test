@@ -1,3 +1,61 @@
+.copyright
+	flex-basis: 100%
+	font-family: Lato
+	font-weight: 300
+	margin: 1em auto
+
+	a
+		text-decoration: underline
+
+.footer-social
+	display: none
+
+.footer-menu
+
+	li
+		display: none
+
+.footer-menus
+	justify-content: space-around
+
+	.logo,
+	.menus
+		flex-basis: 50%
+
+	.logo
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+		padding: 0.3em
+
+		a
+			flex-basis: 100%
+			text-align: center
+
+			img
+				max-width: 200px
+
+		.icon
+			font-size: 1.25em
+			padding: 0.5em
+
+		.phone-contact
+			align-items: center
+			display: flex
+
+		.phone-text
+			div:first-of-type
+				font-size: 0.75em
+
+	.menus
+		padding: 0.3em
+
+		h3
+			font-family: 'Roboto Slab', serif
+			font-size: 1em
+			font-weight: normal
+			margin: 1.2em 0
+
 #main-nav
 	#main-menu,
 	#sec-menu
@@ -48,6 +106,10 @@
 			left: 100%
 
 @media screen and (min-width: $tablet)
+	.footer-menu
+		li
+			display: block
+
 	.hamburguer
 		display: none
 
@@ -69,6 +131,7 @@
 
 		#main-menu
 			flex-basis: 80%
+			font-family: 'Open Sans', sans-serif
 			justify-content: space-around
 			margin-right: 1em
 
@@ -81,7 +144,6 @@
 
 		#sec-menu
 			flex-basis: 90%
-			font-family: 'Roboto Slab', serif
 			justify-content: space-between
 			margin-top: 3em
 
