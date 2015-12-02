@@ -3,22 +3,102 @@
 	#sec-menu
 		display: none
 
+		li
+			&::before
+				content: none
+
 #sec-nav
+	background-color: black
+	color: $l_gray
 	display: none
 
-@media screen and (max-width: ($tablet - $pxem))
-	#main-nav
-		.btn-cart
-			font-size: 1.5em
+	a
+		color: white
+
+	ul
+		padding: 0
+
+		li
+			&::before
+				content: none
+
+	.phone-orders
+		background-color: $d_gray
+		padding: 0.5em 1em
+		position: relative
+		transform: translateY(-4px)
+
+		& > div:first-of-type
+			font-size: 0.7em
+
+		& > div > i
+			font-size: 0.8em
+
+		.phone-number
+			color: $orange
+			margin-left: 0.3em
+
+		&::after
+			border-color: transparent transparent gray gray
+			border-style: solid
+			border-width: 2px
+			content: ''
+			position: absolute
+			top: 0
+			left: 100%
 
 @media screen and (min-width: $tablet)
 	.hamburguer
 		display: none
 
 	#main-nav
+		align-self: flex-start
+		align-items: center
+		display: flex
+		flex-basis: 65%
+		flex-wrap: wrap
+		justify-content: flex-end
+		margin-top: 0.5em
+
 		#main-menu,
 		#sec-menu
-			display: block
+			align-items: center
+			display: flex
+			font-size: 0.7em
+			padding: 0
+
+		#main-menu
+			flex-basis: 80%
+			justify-content: space-around
+			margin-right: 1em
+
+			.main-menu-home
+				font-weight: bold
+
+				i
+					display: inline-block
+					margin-right: 1em
+
+		#sec-menu
+			flex-basis: 90%
+			font-family: 'Roboto Slab', serif
+			justify-content: space-between
+			margin-top: 3em
+
+			a
+				font-weight: bold
+
+			li
+				position: relative
+
+				&:first-of-type::after
+					content: ''
+					border-right: 1px solid $l_gray
+					margin-left: 1em
+
+			.search
+				flex-basis: 40%
 
 	#sec-nav
 		display: block
+		flex-basis: 100%

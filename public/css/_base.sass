@@ -1,10 +1,16 @@
+*
+	box-sizing: border-box
+
 a
+	color: $d_gray
 	text-decoration: none
 	transition: all 0.3s
 
 body
 	color: $d_gray
 	font-family: 'Roboto Condensed', sans-serif
+	margin: 0 auto
+	max-width: 1200px
 
 button,
 input[type=button],
@@ -30,3 +36,48 @@ input[type=submit],
 
 header
 	padding: 1em
+
+input[type=password],
+input[type=search],
+input[type=text]
+	box-sizing: border-box
+	padding: 0.5em
+
+ul
+	list-style: none
+
+	li::before
+		content: $icon-chevron-small-right
+		font-family: icons
+
+.search-bar
+	position: relative
+	width: 100%
+
+	input
+		padding-right: 1.5em
+		transition: all 0.3s
+		width: 100%
+
+		&:focus
+			outline: 4px solid $l_gray
+
+	&::after
+		content: $icon-search
+		font-family: icons
+		position: absolute
+		right: 0.5em
+		top: 50%
+		transform: translateY(-50%)
+
+.text-uppercase
+	text-transform: uppercase
+
+.wrapper
+	margin: 0 auto
+	max-width: 1000px
+	width: 100%
+
+@media screen and (min-width: $tablet)
+	header
+		padding: 0
