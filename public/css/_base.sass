@@ -50,21 +50,28 @@ input[type=submit],
 
 	&.hamburguer
 		background-color: $l_gray
+		border: 1px solid $l_gray
 		color: $d_gray
 		font-size: 2.5em
 		padding: 0.1em
 
 footer
 	font-family: 'Open Sans', sans-serif
+	margin: 1em auto
 
 header
 	padding: 1em
 
+input[type=email],
 input[type=password],
 input[type=search],
 input[type=text]
 	box-sizing: border-box
-	padding: 0.5em
+	padding: 0.45em
+	transition: all 0.3s
+
+	&:focus
+		outline: 1px solid $orange
 
 ul
 	list-style: none

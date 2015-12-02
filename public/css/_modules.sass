@@ -15,7 +15,8 @@
 	#newsletter
 		border-top: 1px solid $l_gray
 		flex-basis: 100%
-		margin: 1em auto
+		margin: 0 auto
+		padding: 2em 0.75em
 		text-align: center
 
 	#follow-us
@@ -34,12 +35,26 @@
 	#newsletter
 		order: 2
 
-.footer-menu
+		.newsletter-fields
+			display: flex
 
+			input
+				flex-grow: 1
+				flex-basis: 50%
+				margin-right: 0.2em
+
+		.newsletter-text
+			margin-bottom: 1em
+
+			.icon
+				margin-right: 0.5em
+
+.footer-menu
 	li
 		display: none
 
 .footer-menus
+	border-top: 1px solid $l_gray
 	justify-content: space-around
 
 	.logo,
