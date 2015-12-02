@@ -7,48 +7,6 @@
 	a
 		text-decoration: underline
 
-.footer-social
-	display: flex
-	flex-wrap: wrap
-
-	#follow-us,
-	#newsletter
-		border-top: 1px solid $l_gray
-		flex-basis: 100%
-		margin: 0 auto
-		padding: 2em 0.75em
-		text-align: center
-
-	#follow-us
-		order: 1
-
-		li
-			display: inline-block
-			padding: 1em 0.5em 0.5em 0.5em
-
-			a
-				font-size: 2em
-
-			&::before
-				content: none
-
-	#newsletter
-		order: 2
-
-		.newsletter-fields
-			display: flex
-
-			input
-				flex-grow: 1
-				flex-basis: 50%
-				margin-right: 0.2em
-
-		.newsletter-text
-			margin-bottom: 1em
-
-			.icon
-				margin-right: 0.5em
-
 .footer-menu
 	li
 		display: none
@@ -94,6 +52,48 @@
 			font-size: 1em
 			font-weight: normal
 			margin: 1.2em 0
+
+.footer-social
+	display: flex
+	flex-wrap: wrap
+
+	#follow-us,
+	#newsletter
+		border-top: 1px solid $l_gray
+		flex-basis: 100%
+		margin: 0 auto
+		padding: 2em 0.75em
+		text-align: center
+
+	#follow-us
+		order: 1
+
+		li
+			display: inline-block
+			padding: 1em 0.5em 0.5em 0.5em
+
+			a
+				font-size: 2em
+
+			&::before
+				content: none
+
+	#newsletter
+		order: 2
+
+		.newsletter-fields
+			display: flex
+
+			input
+				flex-grow: 1
+				flex-basis: 50%
+				margin-right: 0.2em
+
+		.newsletter-text
+			margin-bottom: 1em
+
+			.icon
+				margin-right: 0.5em
 
 #main-nav
 	#main-menu,
@@ -164,6 +164,36 @@
 			h3
 				color: $orange
 				margin: 0 0 0.75em 0
+
+	.footer-social
+		border-top: 1px solid white
+		flex-wrap: nowrap
+		justify-content: space-between
+		position: relative
+		overflow: hidden
+
+		#follow-us,
+		#newsletter
+			border: none
+			flex-basis: 40%
+			margin: 0
+			order: 0
+
+		#follow-us
+			text-align: right
+
+		#newsletter
+			text-align: left
+
+		&::before
+			border-radius: 50%
+			bottom: 100%
+			box-shadow: 1px 1px 5px $d_gray
+			content: ''
+			height: 33%
+			left: 0
+			position: absolute
+			right: 0
 
 	.hamburguer
 		display: none
