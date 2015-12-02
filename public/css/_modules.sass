@@ -1,3 +1,31 @@
+.cant-miss
+	background-color: $l_gray
+	padding: 3em 1em
+
+	.articles + a
+		display: none
+
+	.blog-entry
+		box-shadow: 0 0 1px $d_gray
+		margin-bottom: 2em
+
+	.blog-entry-desc
+		padding: 2em
+
+	.blog-entry-excerpt + a
+		float: right
+	
+	.blog-entry-img
+		margin: 0
+
+		img
+			width: 100%
+
+	.blog-entry-title
+		font-size: 1.2em
+		font-weight: normal
+		margin: 0
+
 .carousel
 	.carousel-img
 		background-position: center
@@ -273,6 +301,29 @@
 			left: 100%
 
 @media screen and (min-width: $tablet)
+	.cant-miss
+		+nice-shadow($d_gray)
+
+		.articles
+			align-items: flex-start
+			display: flex
+			flex-wrap: wrap
+			justify-content: space-around
+
+			& + a
+				display: inline-block
+				float: right
+
+		.blog-entry
+			box-shadow: none
+			flex-basis: 30%
+
+		.blog-entry-desc
+			padding: 1em 0
+
+		.blog-entry-excerpt + a
+			float: none
+
 	.carousel
 		.carousel-img-container
 			position: relative
@@ -387,8 +438,6 @@
 		border-top: 1px solid white
 		flex-wrap: nowrap
 		justify-content: space-between
-		position: relative
-		overflow: hidden
 
 		#follow-us,
 		#newsletter
@@ -402,16 +451,6 @@
 
 		#newsletter
 			text-align: left
-
-		&::before
-			border-radius: 50%
-			bottom: 100%
-			box-shadow: 1px 1px 5px $d_gray
-			content: ''
-			height: 33%
-			left: 0
-			position: absolute
-			right: 0
 
 	.hamburguer
 		display: none
