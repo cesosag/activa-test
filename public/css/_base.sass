@@ -6,6 +6,21 @@ a
 	text-decoration: none
 	transition: all 0.3s
 
+	&[class*=google]
+		color: $google_red
+
+	&[class*=facebook]
+		color: $facebook_blue
+
+	&[class*=twitter]
+		color: $twitter_blue
+
+	&[class*=youtube]
+		color: $youtube_red
+
+	&:hover
+		color: $orange
+
 body
 	color: $d_gray
 	font-family: 'Roboto Condensed', sans-serif
@@ -17,10 +32,15 @@ input[type=button],
 input[type=submit],
 .btn,
 	background-color: $orange
-	border: 1px solid $l_gray
+	border: 1px solid $d_orange
 	color: $l_gray
 	outline: none
 	padding: 0.5em 1em
+	transition: all 0.3s
+
+	&:hover
+		background-color: $d_orange
+		color: white
 
 	&.btn-secondary
 		background-color: white

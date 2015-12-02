@@ -8,7 +8,31 @@
 		text-decoration: underline
 
 .footer-social
-	display: none
+	display: flex
+	flex-wrap: wrap
+
+	#follow-us,
+	#newsletter
+		border-top: 1px solid $l_gray
+		flex-basis: 100%
+		margin: 1em auto
+		text-align: center
+
+	#follow-us
+		order: 1
+
+		li
+			display: inline-block
+			padding: 1em 0.5em 0.5em 0.5em
+
+			a
+				font-size: 2em
+
+			&::before
+				content: none
+
+	#newsletter
+		order: 2
 
 .footer-menu
 
