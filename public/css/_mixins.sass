@@ -1,0 +1,56 @@
+=triangled-edge($color, $direction, $position, $size)
+	&
+		@if $direction == right
+			margin-right: $size !important
+
+		@else if $direction == left
+			margin-left: $size !important
+
+		@else if $direction == up
+			margin-top: $size !important
+
+		@else if $direction == down
+			margin-bottom: $size !important
+
+	&::after
+		border-style: solid
+		color: $color
+		content: ''
+		position: absolute
+		transition: all 0.3s
+
+		@if $direction == right
+			border-bottom-color: transparent
+			border-right-color: transparent
+			border-top-color: transparent
+			border-width: $size 0 $size $size
+			left: 100%
+			top: $position
+			transform: translateY(-50%)
+
+		@else if $direction == left
+			border-bottom-color: transparent
+			border-left-color: transparent
+			border-top-color: transparent
+			border-width: $size $size $size 0
+			right: 100%
+			top: $position
+			transform: translateY(-50%)
+
+		@else if $direction == up
+			border-left-color: transparent
+			border-right-color: transparent
+			border-top-color: transparent
+			border-width: 0 $size $size $size
+			bottom: 100%
+			left: $position
+			transform: translateX(-50%)
+
+		@else if $direction == down
+			border-bottom-color: transparent
+			border-left-color: transparent
+			border-right-color: transparent
+			border-width: $size $size 0 $size
+			top: 100%
+			left: $position
+			transform: translateX(-50%)

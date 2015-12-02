@@ -1,0 +1,88 @@
+.owl-theme
+	// controls container
+	.owl-controls
+		margin-top: 0
+		text-align: center
+		-webkit-tap-highlight-color: transparent
+
+	// Styling Next and Prev buttons
+	.owl-nav
+		[class*='owl-']
+			color: $nav-color
+			cursor: pointer
+			display: inline-block
+			font-size: $nav-font-size
+			line-height: 1
+			margin: $nav-margin
+			padding: $nav-padding
+			position: absolute
+			text-shadow: 1px 1px 1px black
+			top: 50%
+			transform: translateY(-50%)
+			transition: all 0.3s
+
+			&:hover
+				color: $orange
+				text-decoration: none
+
+			.disabled
+				opacity: $nav-disabled-opacity
+				cursor: default
+
+		.owl-next
+			right: 2rem
+
+		.owl-prev
+			left: 2rem
+
+	// Styling dots
+	.owl-nav.disabled + .owl-dots
+		margin-top: 10px
+
+	.owl-dots
+		text-align: center
+		-webkit-tap-highlight-color: transparent
+		
+		.owl-dot
+			display: inline-block
+			zoom: 1
+			*display: inline
+
+			span
+				border: 2px solid white
+				box-shadow: 0 2px 5px $dot-background
+				border-radius: 50%
+				width: $dot-width
+				height: $dot-height
+				margin: $dot-margin
+				//background: $dot-background
+				display: block
+				-webkit-backface-visibility: visible
+
+			&.active,
+			&:hover
+				span
+					background: $dot-background-active
+					box-shadow: 0 0 5px $dot-background
+
+@media screen and (min-width: $tablet)
+	.owl-theme
+		.owl-dots
+			position: absolute
+			bottom: 0.5em
+			left: 0
+			right: 0
+
+			.owl-dot
+				span
+					background: $d_gray
+					border: none
+					box-shadow: none
+					height: $dot-height - 5px
+					width: $dot-width - 5px
+
+				&.active,
+				&:hover
+					span
+						background: white
+						box-shadow: none
