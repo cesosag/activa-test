@@ -175,9 +175,12 @@
 		color: $orange
 		font-size: 2em
 
+	&:nth-of-type(n + 3)
+		display: none
+
 .offers
 	background-color: $l_gray
-	padding: 2em 1em
+	padding: 3em 1em
 
 	.offers-container
 		display: flex
@@ -314,6 +317,38 @@
 
 	.hamburguer
 		display: none
+
+	.offer
+		flex-basis: 30%
+		margin-bottom: 1em
+
+		.btn
+			span
+				display: inline-block
+
+		del,
+		.offer-quantity
+			display: inline-block
+
+		del
+			color: add-alpha($d_gray, 0.5)
+			margin-right: 1.5em
+
+		.offer-price
+			line-height: 1
+
+		.offer-quantity
+			font-weight: 300
+
+		&:nth-of-type(n + 3)
+			display: block
+
+	.offers
+		position: relative
+		+triangled-edge($l_gray, 'down', 50%, 1em)
+
+	.offers-container
+		flex-wrap: wrap
 
 	#main-nav
 		align-self: flex-start

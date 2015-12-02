@@ -1,3 +1,6 @@
+@function add-alpha($color, $alpha)
+	@return rgba(red($color), green($color), blue($color), $alpha)
+
 =triangled-edge($color, $direction, $position, $size)
 	&
 		@if $direction == right
