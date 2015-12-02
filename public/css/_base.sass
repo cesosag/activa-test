@@ -34,6 +34,7 @@ input[type=submit],
 	background-color: $orange
 	border: 1px solid $d_orange
 	color: $l_gray
+	display: inline-block
 	outline: none
 	padding: 0.5em 1em
 	transition: all 0.3s
@@ -76,6 +77,11 @@ input[type=text]
 main
 	margin-top: -1em
 
+section
+	.section-title
+		font-weight: normal
+		text-align: center
+
 ul
 	list-style: none
 	padding: 0
@@ -103,6 +109,30 @@ ul
 		right: 0.5em
 		top: 50%
 		transform: translateY(-50%)
+
+.sq-img
+	overflow: hidden
+	position: relative
+
+	figure
+		bottom: 0
+		left: 0
+		margin: 0
+		position: absolute
+		right: 0
+		top: 0
+
+	img
+		height: 100%
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translateY(-50%) translateX(-50%)
+
+	&::before
+	    content: ''
+	    display: block
+	    padding-top: 100%
 
 .text-align-center
 	text-align: center
